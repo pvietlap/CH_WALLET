@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -12,7 +14,7 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
-
+        buildConfigField "String", "BASE_URL", "\"https://www.coinhako.com/api/v3/\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -29,6 +31,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    dataBinding {
+        enabled = true
+    }
+
 }
 
 dependencies {
@@ -40,4 +47,31 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //noinspection GradleDependency
+    implementation "androidx.navigation:navigation-runtime-ktx:$navigation"
+    //noinspection GradleDependency
+    implementation "androidx.navigation:navigation-runtime-ktx:$navigation"
+    //noinspection GradleDependency
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation"
+    //noinspection GradleDependency
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation"
+    //noinspection GradleDependency
+    implementation "androidx.navigation:navigation-testing:$navigation"
+    //noinspection GradleDependency
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation"
+    //noinspection GradleDependency
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation"
+    implementation "com.ncapdevi:frag-nav:$nav_controller"
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation "com.squareup.retrofit2:retrofit-mock:$retrofit"
+    implementation "io.insert-koin:koin-android:$koin_version"
+
+
+    implementation "com.squareup.okhttp3:logging-interceptor:$logging_interceptor_version"
+
+
+
 }
