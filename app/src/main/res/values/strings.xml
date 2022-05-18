@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ChWallet</string>
     <string name="loading_data">Loading data</string>
+    <string name="my_wallet">My Wallet</string>
+    <string name="lb_search">Search</string>
+    <string name="no_data">No data</string>
 </resources>

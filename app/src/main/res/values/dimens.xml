@@ -38,6 +38,6 @@
     <dimen name="corner_radius_xxlarge">30dp</dimen>
     <dimen name="corner_radius_hug">50dp</dimen>
 
-    <dimen name="size_avatar">40dp</dimen>
+    <dimen name="size_avatar">45dp</dimen>
 
 </resources>

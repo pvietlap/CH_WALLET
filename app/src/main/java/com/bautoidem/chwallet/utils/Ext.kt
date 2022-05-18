@@ -1,4 +1,11 @@
 package com.bautoidem.chwallet.utils
 
-class Ext {
+import android.view.View
+
+fun View.toGone() = apply {
+    visibility = View.GONE
+}
+
+fun View.toVisible() = apply {
+    visibility = View.VISIBLE
 }

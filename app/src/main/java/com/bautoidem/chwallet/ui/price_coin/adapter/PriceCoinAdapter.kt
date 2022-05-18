@@ -8,6 +8,7 @@ import com.bautoidem.chwallet.base.adapter.CoreRecyclerViewAdapter
 import com.bautoidem.chwallet.base.adapter.DataBoundViewHolder
 import com.bautoidem.chwallet.ui.price_coin.data.ItemPriceCoinSealed
 import com.bautoidem.chwallet.ui.price_coin.data.TypePriceCoin
+import com.bautoidem.chwallet.ui.price_coin.view_holder.ItemEmptyCoinViewHolder
 import com.bautoidem.chwallet.ui.price_coin.view_holder.ItemPriceCoinViewHolder
 
 class PriceCoinAdapter(context: Context?, var callback: OnClickItem) :
@@ -40,6 +41,9 @@ class PriceCoinAdapter(context: Context?, var callback: OnClickItem) :
         return when (viewType) {
             TypePriceCoin.ITEM_PRICE_COIN -> {
                 ItemPriceCoinViewHolder(context,createBinding(parent, viewType))
+            }
+            TypePriceCoin.ITEM_EMPTY->{
+                ItemEmptyCoinViewHolder(context,createBinding(parent,viewType))
             }
             else -> {
                 ItemPriceCoinViewHolder(context,createBinding(parent, viewType))

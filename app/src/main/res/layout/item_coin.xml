@@ -49,7 +49,6 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txtTitle"
                         style="@style/TextView.Medium.Medium.Bold"
-                        android:text="bit coin"
                         android:textColor="@color/colorTextTitle"
                         android:textSize="@dimen/font_xmedium" />
 
@@ -57,7 +56,6 @@
                         android:id="@+id/txtSubTitle"
                         style="@style/TextView.Medium.Medium"
                         android:layout_marginStart="@dimen/spacing_ability"
-                        android:text="/USD"
                         android:textColor="@color/colorTextDescription"
                         android:textSize="@dimen/font_normal" />
 
@@ -69,7 +67,6 @@
                     style="@style/TextView.Medium.Light"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:text="BTC"
                     android:textColor="@color/colorTextDescription"
                     android:textSize="@dimen/font_normal" />
 
@@ -89,16 +86,14 @@
                     android:layout_gravity="end"
                     style="@style/TextView.Medium.Medium.Bold"
                     android:maxLines="1"
-                    android:textColor="@color/colorTextGreen"
-                    tools:text="+12589" />
+                    android:textColor="@color/colorTextGreen" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_gravity="end"
                     android:id="@+id/txtPriceSell"
                     style="@style/TextView.Medium.Medium.Bold"
                     android:maxLines="1"
-                    android:textColor="@color/colorTextRed"
-                    tools:text="-12.5897" />
+                    android:textColor="@color/colorTextRed" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.constraintlayout.widget.ConstraintLayout>

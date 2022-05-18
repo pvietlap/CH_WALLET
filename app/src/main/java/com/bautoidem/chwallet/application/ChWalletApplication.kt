@@ -22,7 +22,8 @@ class ChWalletApplication : Application() {
                 listOf(
                     networkModule,
                     repositoryModule,
-                    retrofitModule
+                    retrofitModule,
+                    viewModelModule
                 )
             )
         }
