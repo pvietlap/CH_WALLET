@@ -69,9 +69,11 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit-mock:$retrofit"
     implementation "io.insert-koin:koin-android:$koin_version"
 
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_android"
+
 
     implementation "com.squareup.okhttp3:logging-interceptor:$logging_interceptor_version"
 
-
+    implementation "com.github.bumptech.glide:glide:$glide_version"
 
 }

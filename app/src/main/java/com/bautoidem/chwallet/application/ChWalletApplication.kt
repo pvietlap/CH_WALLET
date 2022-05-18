@@ -1,9 +1,7 @@
 package com.bautoidem.chwallet.application
 
 import android.app.Application
-import com.bautoidem.chwallet.di.networkModule
-import com.bautoidem.chwallet.di.repositoryModule
-import com.bautoidem.chwallet.di.retrofitModule
+import com.bautoidem.chwallet.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

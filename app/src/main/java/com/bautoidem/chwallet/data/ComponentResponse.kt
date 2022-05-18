@@ -6,5 +6,5 @@ import com.google.gson.annotations.SerializedName
 data class ComponentResponse<T : Any>(
     @SerializedName("data")
     @Expose
-    val list: List<T>
+    val list: MutableList<T>
 )

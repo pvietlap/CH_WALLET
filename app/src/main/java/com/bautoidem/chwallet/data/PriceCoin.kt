@@ -12,10 +12,10 @@ data class PriceCoin(
     val counter: String? = null,
     @SerializedName("buy_price")
     @Expose
-    val buy_price: String? = null,
+    val buyPrice: String? = null,
     @SerializedName("sell_price")
     @Expose
-    val sell_price: String? = null,
+    val sellPrice: String? = null,
     @SerializedName("icon")
     @Expose
     val icon: String? = null,

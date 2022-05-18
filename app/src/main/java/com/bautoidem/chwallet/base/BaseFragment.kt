@@ -15,17 +15,13 @@ abstract class BaseFragment<B: ViewDataBinding>(private val layoutId : Int): Fra
     var hasInitializedRootView = false
     private var rootView: View? = null
 
-
-    abstract fun getDataBindingComponent(): androidx.databinding.DataBindingComponent
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         if (rootView==null){
-            val dataBinding= DataBindingUtil.inflate<B>(inflater,layoutId,container,false,getDataBindingComponent())
+            val dataBinding= DataBindingUtil.inflate<B>(inflater,layoutId,container,false)
             binding=dataBinding
             binding.lifecycleOwner=this
             rootView=binding.root

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Text size-->
+    <dimen name="font_ability">6sp</dimen>
+    <dimen name="font_very_small">8sp</dimen>
+    <dimen name="font_very_xsmall">9sp</dimen>
+    <dimen name="font_small">10sp</dimen>
+    <dimen name="font_xsmall">11sp</dimen>
+    <dimen name="font_normal">12sp</dimen>
+    <dimen name="font_xnormal">14sp</dimen>
+    <dimen name="font_medium">15sp</dimen>
+    <dimen name="font_xmedium">16sp</dimen>
+    <dimen name="font_large">20sp</dimen>
+    <dimen name="font_xlarge">22sp</dimen>
+    <dimen name="font_big">25sp</dimen>
+
+    <!--Spacing-->
+    <dimen name="spacing_ability">1dp</dimen>
+    <dimen name="spacing_small">5dp</dimen>
+    <dimen name="spacing_normal">7dp</dimen>
+    <dimen name="spacing_medium">10dp</dimen>
+    <dimen name="spacing_large">15dp</dimen>
+    <dimen name="spacing_huge">20dp</dimen>
+    <dimen name="spacing_xhuge">25dp</dimen>
+    <dimen name="spacing_xxhuge">30dp</dimen>
+    <dimen name="spacing_big">55dp</dimen>
+    <dimen name="spacing_xbig">60dp</dimen>
+
+
+
+    <!--Corner Radius-->
+    <dimen name="corner_radius_small">2dp</dimen>
+    <dimen name="corner_radius_normal">5dp</dimen>
+    <dimen name="corner_radius_medium">15dp</dimen>
+    <dimen name="corner_radius_large">20dp</dimen>
+    <dimen name="corner_radius_xlarge">25dp</dimen>
+    <dimen name="corner_radius_xxlarge">30dp</dimen>
+    <dimen name="corner_radius_hug">50dp</dimen>
+
+    <dimen name="size_avatar">40dp</dimen>
+
+</resources>

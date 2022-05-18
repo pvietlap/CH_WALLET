@@ -6,6 +6,8 @@ buildscript {
     ext.retrofit = "2.9.0"
     ext.koin_version= "3.2.0"
     ext.logging_interceptor_version='4.9.0'
+    ext.coroutines_android='1.4.1'
+    ext.glide_version='4.13.0'
 
     repositories {
         google()
