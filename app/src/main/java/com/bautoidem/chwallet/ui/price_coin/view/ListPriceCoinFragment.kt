@@ -16,6 +16,7 @@ import com.bautoidem.chwallet.base.BaseFragment
 import com.bautoidem.chwallet.databinding.FragmentListPriceCoinBinding
 import com.bautoidem.chwallet.ui.price_coin.adapter.PriceCoinAdapter
 import com.bautoidem.chwallet.ui.price_coin.data.ItemPriceCoinSealed
+import com.bautoidem.chwallet.utils.AppConstant
 import com.bautoidem.chwallet.utils.toGone
 import com.bautoidem.chwallet.utils.toVisible
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -66,7 +67,7 @@ class ListPriceCoinFragment :
     }
 
     override fun initData() {
-        priceCoinViewModel.getPriceCoinList("USD")
+        priceCoinViewModel.getPriceCoinList(AppConstant.CURRENCY)
         priceCoinViewModel.getKeyText()
     }
 
