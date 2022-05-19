@@ -51,20 +51,46 @@
         </androidx.cardview.widget.CardView>
 
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edtSearch"
-            android:visibility="gone"
-            style="@style/TextView.Medium.Medium"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewSearch"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_margin="@dimen/spacing_large"
             android:background="@drawable/bg_search"
-            android:drawableEnd="@drawable/ic_close"
-            android:hint="@string/lb_search"
-            android:paddingHorizontal="@dimen/spacing_large"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/viewTop" />
+            app:layout_constraintTop_toBottomOf="@+id/viewTop">
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtSearch"
+                style="@style/TextView.Medium.Medium"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:background="@color/transparent"
+                android:hint="@string/lb_search"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/spacing_large"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgClose"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_medium"
+                android:src="@drawable/ic_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"
@@ -74,7 +100,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtSearch" />
+            app:layout_constraintTop_toBottomOf="@+id/viewSearch" />
 
 
         <include

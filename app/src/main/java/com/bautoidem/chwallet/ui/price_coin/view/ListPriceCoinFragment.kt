@@ -39,24 +39,9 @@ class ListPriceCoinFragment :
         binding.imgSearch.setOnClickListener {
             setUISearch()
         }
-
-        binding.edtSearch.setOnTouchListener(object : View.OnTouchListener {
-            @RequiresApi(Build.VERSION_CODES.M)
-            override fun onTouch(
-                p0: View?,
-                @SuppressLint("ClickableViewAccessibility") p1: MotionEvent?
-            ): Boolean {
-                val DRAWABLE_RIGHT = 2;
-                if (p1?.action == MotionEvent.ACTION_UP) {
-                    if (p1.rawX >= (binding.edtSearch.right - binding.edtSearch.compoundDrawables[DRAWABLE_RIGHT].bounds.width())) {
-                        setUISearch()
-                        return true
-                    }
-                }
-                return false
-            }
-
-        })
+        binding.imgClose.setOnClickListener {
+            setUISearch()
+        }
         binding.edtSearch.doAfterTextChanged {
             priceCoinViewModel.searchCoin(it.toString())
         }
@@ -67,14 +52,14 @@ class ListPriceCoinFragment :
         isSearch = !isSearch
         if (isSearch) {
             binding.imgSearch.toGone()
-            binding.edtSearch.toVisible()
+            binding.viewSearch.toVisible()
             binding.edtSearch.requestFocus()
             val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
             imm!!.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY)
         } else {
             binding.edtSearch.setText("")
             binding.imgSearch.toVisible()
-            binding.edtSearch.toGone()
+            binding.viewSearch.toGone()
             val imm: InputMethodManager = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(binding.edtSearch.windowToken, 0)
         }
