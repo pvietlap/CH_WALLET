@@ -6,6 +6,7 @@ import android.os.Build
 import android.view.MotionEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.core.widget.doAfterTextChanged
@@ -81,10 +82,11 @@ class ListPriceCoinFragment :
 
     override fun initData() {
         priceCoinViewModel.getPriceCoinList("USD")
+        priceCoinViewModel.getKeyText()
     }
 
     override fun initObserver() {
-        priceCoinViewModel.priceCoinList.observeForever {
+        priceCoinViewModel.priceCoinList.observe(this) {
             if (adapter == null) {
                 adapter = PriceCoinAdapter(activity) { data: Any?, type: Int ->
                     data?.let { it1 -> executeActionClick(type, it1) }
@@ -98,9 +100,10 @@ class ListPriceCoinFragment :
                 val data = it.map { v -> ItemPriceCoinSealed.ItemPriceCoinDisplay(v) }
                 adapter?.submitList(data)
             }
-
-
             binding.viewLoading.viewAll.visibility = View.GONE
+        }
+        priceCoinViewModel.keyText.observe(this){
+            Toast.makeText(activity,it,Toast.LENGTH_LONG).show()
         }
     }
 

@@ -20,10 +20,11 @@ class ChWalletApplication : Application() {
             androidContext(this@ChWalletApplication)
             modules(
                 listOf(
+                    preferenceModule,
                     networkModule,
                     repositoryModule,
                     retrofitModule,
-                    viewModelModule
+                    viewModelModule,
                 )
             )
         }
