@@ -14,4 +14,5 @@
   - Glide:'4.13.0'
   - Preferences: '0.1.3'
   - Coroutines: '1.4.1'
-  - Kotlin: '3.2.0'
+  - Kotlin: '1.6.7'
+  - Koin: '3.2.0'
