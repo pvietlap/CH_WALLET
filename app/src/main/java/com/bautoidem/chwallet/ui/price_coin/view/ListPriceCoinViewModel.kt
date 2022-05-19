@@ -57,6 +57,7 @@ class ListPriceCoinViewModel(private val priceRepo: PriceRepo,private val prefer
                     dataPriceCoin = data
                 } catch (e: Exception) {
                     e.message?.let { Log.d("Error", it) }
+                    _priceCoinList.postValue(mutableListOf())
                 }
             }
         }
